@@ -1,11 +1,13 @@
 <?php
 namespace Gram\Entity\Mapping;
 
+use Gram\Entity\IMapping;
+
 /**
  * Class Mapper
  * @package Gram\Entity\Mapping
  */
-class Mapper implements IMapper
+class Mapping implements IMapping
 {
     /**
      * @var Metadata

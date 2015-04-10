@@ -8,7 +8,7 @@ use Gram\Entity\IValidatable;
  *
  * @package Gram\DataMapper\Mapping
  */
-class PropertyMapper
+class PropertyMapping
 {
     /**
      * @var Property
@@ -27,7 +27,7 @@ class PropertyMapper
     /**
      * @param IValidatable $v
      *
-     * @return PropertyMapper
+     * @return PropertyMapping
      */
     function validator(IValidatable $v)
     {
@@ -42,7 +42,7 @@ class PropertyMapper
      *
      * @param string $type
      *
-     * @return PropertyMapper
+     * @return PropertyMapping
      */
     function type($type)
     {
@@ -53,7 +53,7 @@ class PropertyMapper
     /**
      * @param bool $autoIncrement
      *
-     * @return PropertyMapper
+     * @return PropertyMapping
      */
     function autoIncrement($autoIncrement = true)
     {
@@ -63,7 +63,7 @@ class PropertyMapper
 
     /**
      * 是否必须
-     * @return PropertyMapper
+     * @return PropertyMapping
      */
     function required()
     {
@@ -76,7 +76,7 @@ class PropertyMapper
      *
      * @param string $column
      *
-     * @return PropertyMapper
+     * @return PropertyMapping
      */
     function column($column)
     {
@@ -88,7 +88,7 @@ class PropertyMapper
      * @param callable $getter
      * @param callable $setter
      *
-     * @return PropertyMapper
+     * @return PropertyMapping
      */
     function converter(\Closure $getter, \Closure $setter)
     {

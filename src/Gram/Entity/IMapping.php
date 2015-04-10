@@ -1,26 +1,30 @@
 <?php
 namespace Gram\Entity;
 
-interface IMapper
+/**
+ * Interface IMapping
+ * @package Gram\Entity
+ */
+interface IMapping
 {
     /**
      * 定义属性名称
      *
      * @param string $name
      *
-     * @return IMapper
+     * @return IMapping
      */
     function map($name);
 
     /**
      * @param string $name
      *
-     * @return IMapper
+     * @return IMapping
      */
     function id($name);
 
     /**
-     * @return Metadata
+     * @return \Gram\Entity\Mapping\Metadata
      */
     function metadata();
 } 

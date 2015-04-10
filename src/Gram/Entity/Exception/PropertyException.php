@@ -1,5 +1,5 @@
 <?php
-namespace Gram\DataMapper\Exception;
+namespace Gram\Entity\Exception;
 
 /**
  * Class PropertyException
