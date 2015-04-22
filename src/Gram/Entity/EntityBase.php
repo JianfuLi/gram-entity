@@ -40,6 +40,9 @@ abstract class EntityBase implements IEntity
         $reflector = $this->getReflector();
         $ps = $reflector->getProperties(\ReflectionProperty::IS_PUBLIC);
         foreach ($ps as $p) {
+            if ($p->isStatic()) {
+                continue;
+            }
             $properties[$p->getName()] = $this->{$p->getName()};
         }
         return new EntityIterator($properties);
